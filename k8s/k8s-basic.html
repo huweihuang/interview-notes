@@ -1,0 +1,652 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>k8s基础 · 面试笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="胡伟煌">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="k8s-advanced.html" />
+    
+    
+    <link rel="prev" href="../golang/golang-advanced.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../images/favicon.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../images/favicon.ico">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon.ico">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"huweihuang/interview-notes","types":["star"],"size":"small"};
+    </script>
+
+
+        <!-- https://www.google.com/adsense -->
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8205636531078391" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.huweihuang.com" target="_blank" class="custom-link">胡伟煌的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">目录</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../linux/linux.html">
+            
+                <a href="../linux/linux.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Linux基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../data-structure/data-structure.html">
+            
+                <a href="../data-structure/data-structure.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    数据结构基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">TCP/IP</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../tcpip/tcpip.html">
+            
+                <a href="../tcpip/tcpip.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    TCP/IP基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Golang</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../golang/golang-basic.html">
+            
+                <a href="../golang/golang-basic.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Golang基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../golang/golang-advanced.html">
+            
+                <a href="../golang/golang-advanced.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Golang进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Kubernetes</li>
+        
+        
+    
+        <li class="chapter active" data-level="6.1" data-path="k8s-basic.html">
+            
+                <a href="k8s-basic.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    k8s基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="k8s-advanced.html">
+            
+                <a href="k8s-advanced.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    k8s进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">算法题</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../leetcode/leetcode.html">
+            
+                <a href="../leetcode/leetcode.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    LeetCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >k8s基础</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="k8s&#x7F51;&#x7EDC;">k8s&#x7F51;&#x7EDC;</h1>
+<p>&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;pod&#x7684;ip&#x4F8B;&#x5982;10.232.46.109&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x5148;&#x7ECF;&#x8FC7;&#x4EE3;&#x7406;&#x673A;&#x5668;&#xFF0C;&#x5728;&#x4EE3;&#x7406;&#x673A;&#x5668;&#x4E0A;&#x67E5;&#x770B;&#x8DEF;&#x7531;&#x8868;</p>
+<pre class="language-"><code class="lang-bash">$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+10.232.46.64    192.168.99.42   255.255.255.192 UG    0      0        0 bond0
+</code></pre>
+<p>&#x53D1;&#x73B0;&#x8981;&#x8F6C;&#x53D1;&#x7ED9;&#x7F51;&#x5173;192.168.99.42&#xFF0C;&#x6240;&#x4EE5;&#x5305;&#x8F6C;&#x53D1;&#x5230;&#x8282;&#x70B9;&#x673A;&#x5668;192.168.99.42</p>
+<p>&#x67E5;&#x770B;192.168.99.42&#x7684;&#x8DEF;&#x7531;&#x8868;</p>
+<pre class="language-"><code class="lang-bash">$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+10.232.46.109   0.0.0.0         255.255.255.255 UH    0      0        0 calia7b9a112dad
+</code></pre>
+<p>&#x53D1;&#x73B0;&#x53EF;&#x4EE5;&#x5230;&#x672C;&#x5730;&#x7684;10.232.46.109&#x7F51;&#x5361;&#x3002;</p>
+<h2 id="&#x540C;&#x8282;&#x70B9;&#x7684;pod&#x901A;&#x4FE1;">&#x540C;&#x8282;&#x70B9;&#x7684;pod&#x901A;&#x4FE1;</h2>
+<p>&#x5728;pause&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x4E4B;&#x524D;&#xFF0C;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x4EE5;&#x592A;&#x7F51;&#x63A5;&#x53E3;&#x5BF9;&#xFF08;veth pair&#xFF09;&#xFF0C;&#x8BE5;&#x63A5;&#x53E3;&#x5BF9;&#x4E00;&#x7AEF;&#x8FDE;&#x7740;&#x5BB9;&#x5668;&#x5185;&#x90E8;&#x7684;eth0 &#xFF0C;&#x4E00;&#x7AEF;&#x8FDE;&#x7740;&#x5BB9;&#x5668;&#x5916;&#x90E8;&#x7684;vethxxx&#xFF0C;vethxxx&#x4F1A;&#x7ED1;&#x5B9A;&#x5230;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#x914D;&#x7F6E;&#x4F7F;&#x7528;&#x7684;&#x7F51;&#x6865;bridge0&#x4E0A;&#xFF0C;&#x4ECE;&#x8BE5;&#x7F51;&#x7EDC;&#x7684;IP&#x6BB5;&#x4E2D;&#x5206;&#x914D;IP&#x7ED9;&#x5BB9;&#x5668;&#x7684;eth0&#x3002;</p>
+<p>&#x5F53;&#x540C;&#x8282;&#x70B9;&#x4E0A;&#x7684;Pod-A&#x53D1;&#x5305;&#x7ED9;Pod-B&#x65F6;&#xFF0C;&#x5305;&#x4F20;&#x9001;&#x8DEF;&#x7EBF;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>pod-a&#x7684;eth0&#x2014;&gt;pod-a&#x7684;vethxxx&#x2014;&gt;bridge0&#x2014;&gt;pod-b&#x7684;vethxxx&#x2014;&gt;pod-b&#x7684;eth0
+</code></pre><p>&#x56E0;&#x4E3A;&#x76F8;&#x540C;&#x8282;&#x70B9;&#x7684;bridge0&#x662F;&#x76F8;&#x901A;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;bridge0&#x6765;&#x5B8C;&#x6210;&#x4E0D;&#x540C;pod&#x76F4;&#x63A5;&#x7684;&#x901A;&#x4FE1;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x7684;bridge0&#x662F;&#x4E0D;&#x901A;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x7684;pod&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x9700;&#x8981;&#x5C06;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x7684;bridge0&#x7ED9;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x3002;</p>
+<h2 id="&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x7684;pod&#x901A;&#x4FE1;">&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x7684;pod&#x901A;&#x4FE1;</h2>
+<p>&#x8FDE;&#x63A5;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x7684;bridge0&#x7684;&#x65B9;&#x5F0F;&#x6709;&#x597D;&#x51E0;&#x79CD;&#xFF0C;&#x4E3B;&#x8981;&#x6709;overlay&#x548C;underlay&#xFF0C;&#x6216;&#x5E38;&#x89C4;&#x7684;&#x4E09;&#x5C42;&#x8DEF;&#x7531;&#x3002;</p>
+<p>&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x7684;bridge0&#x9700;&#x8981;&#x4E0D;&#x540C;&#x7684;IP&#x6BB5;&#xFF0C;&#x4FDD;&#x8BC1;Pod IP&#x5206;&#x914D;&#x4E0D;&#x4F1A;&#x51B2;&#x7A81;&#xFF0C;&#x8282;&#x70B9;&#x7684;&#x7269;&#x7406;&#x7F51;&#x5361;eth0&#x4E5F;&#x8981;&#x548C;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x7F51;&#x6865;bridge0&#x8FDE;&#x63A5;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x8282;&#x70B9;a&#x4E0A;&#x7684;pod-a&#x53D1;&#x5305;&#x7ED9;&#x8282;&#x70B9;b&#x4E0A;&#x7684;pod-b&#xFF0C;&#x8DEF;&#x7EBF;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>&#x8282;&#x70B9;a&#x4E0A;&#x7684;pod-a&#x7684;eth0&#x2014;&gt;pod-a&#x7684;vethxxx&#x2014;&gt;&#x8282;&#x70B9;a&#x7684;bridge0&#x2014;&gt;&#x8282;&#x70B9;a&#x7684;eth0&#x2014;&gt;
+
+&#x8282;&#x70B9;b&#x7684;eth0&#x2014;&gt;&#x8282;&#x70B9;b&#x7684;bridge0&#x2014;&gt;pod-b&#x7684;vethxxx&#x2014;&gt;pod-b&#x7684;eth0
+</code></pre><p>&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x70B9;&#x662F;&#xFF0C;&#x9700;&#x8981;&#x6709;Pod IP&#x7684;&#x8DEF;&#x7531;&#x8868;&#xFF0C;&#x8FD9;&#x4E00;&#x70B9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;calico&#x89E3;&#x51B3;&#x3002;</p>
+<h2 id="&#x6E90;&#x7801;&#x5206;&#x6790;-kubelet">&#x6E90;&#x7801;&#x5206;&#x6790;-kubelet</h2>
+<ul>
+<li>&#x521D;&#x59CB;&#x5316;&#x5404;&#x79CD;&#x6240;&#x9700;&#x53C2;&#x6570;&#xFF0C;&#x521B;&#x5EFA;&#x5E76;&#x521D;&#x59CB;&#x5316;kubelet&#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x8FD0;&#x884C;kubelet.run&#x65B9;&#x6CD5;&#xFF0C;</li>
+<li><code>kubelet</code>&#x901A;&#x8FC7;&#x5404;&#x79CD;&#x7C7B;&#x578B;&#x7684;<code>manager</code>&#x5F02;&#x6B65;&#x5DE5;&#x4F5C;&#x5404;&#x81EA;&#x6267;&#x884C;&#x5404;&#x81EA;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;podManager&#x8D1F;&#x8D23;pod&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x7BA1;&#x7406;&#x3002;</li>
+<li>&#x5176;&#x4E2D;&#x4F7F;&#x7528;&#x5230;&#x4E86;&#x591A;&#x79CD;&#x7684;<code>channel</code>&#x6765;&#x63A7;&#x5236;&#x72B6;&#x6001;&#x4FE1;&#x53F7;&#x53D8;&#x5316;&#x7684;&#x4F20;&#x9012;&#xFF0C;&#x4F8B;&#x5982;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;channel&#x6709;<code>podUpdates &lt;-chan UpdatePodOptions</code>&#xFF0C;&#x6765;&#x4F20;&#x9012;pod&#x7684;&#x53D8;&#x5316;&#x60C5;&#x51B5;&#x3002;</li>
+<li>&#x5176;&#x4E2D;pod&#x7684;&#x7BA1;&#x7406;&#x4F7F;&#x7528;&#x4E86;syncPod&#x7684;&#x51FD;&#x6570;&#x6765;&#x5904;&#x7406;pod&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x521B;&#x5EFA;sandbox&#xFF0C;&#x542F;&#x52A8;init&#x5BB9;&#x5668;&#xFF0C;&#x62C9;&#x53D6;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x5BB9;&#x5668;&#xFF0C;&#x6267;&#x884C;post start hook&#x3002;</li>
+</ul>
+<h2 id="service">Service</h2>
+<p>Service&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x79CD;&#x62BD;&#x8C61;&#xFF1A;&#x4E00;&#x7EC4;Pod&#x7684;&#x8BBF;&#x95EE;&#x903B;&#x8F91;&#x62BD;&#x8C61;&#xFF0C;&#x8FD9;&#x7EC4;Pod&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x7EC4;&#x5FAE;&#x670D;&#x52A1;&#xFF0C;&#x800C;&#x8BBF;&#x95EE;&#x8BE5;&#x7EC4;&#x5FAE;&#x670D;&#x52A1;&#x53EA;&#x9700;&#x8981;&#x8BBF;&#x95EE;Service&#x8FD9;&#x4E2A;&#x5165;&#x53E3;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x5173;&#x5FC3;&#x8FD9;&#x7EC4;&#x5FAE;&#x670D;&#x52A1;&#x5BF9;&#x5E94;&#x4E86;&#x591A;&#x5C11;&#x4E2A;&#x5B9E;&#x4F8B;&#x548C;&#x5B9E;&#x4F8B;&#x7684;&#x53D8;&#x5316;&#xFF08;&#x4F8B;&#x5982;pod&#x88AB;&#x91CD;&#x5EFA;&#x540E;IP&#x53D8;&#x5316;&#x7684;&#x95EE;&#x9898;&#xFF09;&#x3002;</p>
+<p>Service&#x4E0E;Pod&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x8054;&#x901A;&#x8FC7;<code>Label Selector</code>&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x3002;Service&#x89E3;&#x8026;&#x4E86;fronend&#x4E0E;backend&#x4E4B;&#x95F4;&#x7684;&#x76F4;&#x63A5;&#x8054;&#x7CFB;&#xFF0C;&#x800C;&#x662F;&#x7531;Service&#x6765;&#x4F5C;&#x4E3A;fronend&#x548C;backend&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x6865;&#x6881;&#x3002;</p>
+<p>&#x5BF9; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x5E94;&#x7528;&#xFF0C;Kubernetes &#x63D0;&#x4F9B;&#x4E86;&#x7B80;&#x5355;&#x7684; <code>Endpoints</code> API&#xFF0C;&#x53EA;&#x8981; <code>Service</code> &#x4E2D;&#x7684;&#x4E00;&#x7EC4; <code>Pod</code> &#x53D1;&#x751F;&#x53D8;&#x66F4;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C31;&#x4F1A;&#x88AB;&#x66F4;&#x65B0;&#x3002; &#x5BF9;&#x975E; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x5E94;&#x7528;&#xFF0C;Kubernetes &#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x4E8E; VIP &#x7684;&#x7F51;&#x6865;&#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE; <code>Service</code>&#xFF0C;&#x518D;&#x7531; <code>Service</code> &#x91CD;&#x5B9A;&#x5411;&#x5230; backend <code>Pod</code>&#x3002;</p>
+<p>&#x53C2;&#x8003;&#xFF1A;<a href="https://k8smeetup.github.io/docs/concepts/services-networking/service/" target="_blank">https://k8smeetup.github.io/docs/concepts/services-networking/service/</a></p>
+<h2 id="kube-proxy&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;">kube-proxy&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;</h2>
+<ul>
+<li><p>kube-proxy&#x672C;&#x8D28;&#x5C31;&#x662F;&#x5B9E;&#x73B0;service&#x5BF9;&#x5E94;&#x7684;&#x4E00;&#x7EC4;pod&#x7684;&#x6D41;&#x91CF;&#x4EE3;&#x7406;&#x529F;&#x80FD;&#xFF0C;&#x7BA1;&#x7406;service&#x548C;endpoint&#x7684;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#xFF0C;&#x6839;&#x636E;endpoint&#x7684;&#x53D8;&#x5316;&#x5728;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;iptables&#x7684;&#x89C4;&#x5219;&#x3002;</p>
+</li>
+<li><p>&#x5F53;&#x8BBF;&#x95EE;service cluster ip&#x548C;&#x7AEF;&#x53E3;&#x65F6;&#xFF0C;iptables&#x7684;&#x89C4;&#x5219;&#x4F1A;&#x901A;&#x8FC7;NAT&#x7684;&#x65B9;&#x5F0F;&#x5C06;&#x6D41;&#x91CF;&#x8F6C;&#x5230;service&#x5BF9;&#x5E94;&#x7684;pod&#x4E0A;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x8F6E;&#x8BE2;&#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x3002;</p>
+</li>
+<li><p>&#x7F3A;&#x70B9;&#x662F;&#x5F53;endpoint&#x7279;&#x522B;&#x591A;&#x7684;&#x65F6;&#x5019;&#xFF0C;iptables rules&#x5C06;&#x4F1A;&#x975E;&#x5E38;&#x5E9E;&#x5927;&#xFF0C;&#x5219;&#x5B58;&#x5728;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+<li><p>&#x6240;&#x4EE5;&#x76EE;&#x524D;&#x5927;&#x90E8;&#x5206;&#x662F;&#x901A;&#x8FC7;ingress controller&#x6765;&#x5B9E;&#x73B0;&#x6D41;&#x91CF;&#x4EE3;&#x7406;&#x800C;&#x4E0D;&#x662F;kube-proxy&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+</li>
+</ul>
+<h2 id="ingress&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;">ingress&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;</h2>
+<p>ingress&#x662F;k8s&#x7684;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#xFF0C;&#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x7684;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x3002;&#x800C;ingress controller&#x5B9E;&#x65F6;&#x5B9E;&#x73B0;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#xFF0C;ingress controller&#x5E38;&#x7528;&#x7684;&#x6709;Nginx ingress controller&#x3002;</p>
+<p>&#x57FA;&#x672C;&#x903B;&#x8F91;&#x662F;&#x5F53;&#x65B0;&#x589E;&#x4E00;&#x4E2A;pod&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;ingress&#x81EA;&#x52A8;&#x7EF4;&#x62A4;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#xFF0C;ingress controller&#x5B9E;&#x65F6;&#x66F4;&#x65B0;Nginx&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;reload Nginx&#x4F7F;&#x5176;&#x751F;&#x6548;&#x3002;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x9996;&#x5148;&#x5BF9; kubia.example.com &#x6267;&#x884C; DNS &#x67E5; &#x627E;&#xFF0C; DNS &#x670D;&#x52A1;&#x5668;&#xFF08;&#x6216;&#x672C;&#x5730;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF09;&#x8FD4;&#x56DE;&#x4E86;Ingress &#x63A7;&#x5236;&#x5668;&#x7684; IP&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x7136;&#x540E; &#x5411; Ingress &#x63A7;&#x5236;&#x5668;&#x53D1;&#x9001; HTTP &#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x5728; Host &#x5934;&#x4E2D;&#x6307;&#x5B9A; kubia . example.com&#x3002;&#x63A7;&#x5236;&#x5668;&#x4ECE;&#x8BE5;&#x5934;&#x90E8;&#x786E;&#x5B9A;&#x5BA2;&#x6237;&#x7AEF;&#x5C1D;&#x8BD5;&#x8BBF; &#x95EE;&#x54EA;&#x4E2A;&#x670D;&#x52A1;&#xFF0C;&#x901A;&#x8FC7;&#x4E0E;&#x8BE5;&#x670D;&#x52A1;&#x5173;&#x8054; &#x7684; Endpoint &#x5BF9;&#x8C61;&#x67E5;&#x770B; pod IP &#xFF0C;&#x5E76;&#x5C06;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x7ED9;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;pod &#x3002;
+&#x5982;&#x4F60;&#x6240;&#x89C1;&#xFF0C; Ingress &#x63A7;&#x5236;&#x5668;&#x4E0D;&#x4F1A;&#x5C06;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x7ED9;&#x8BE5;&#x670D;&#x52A1;&#xFF0C;&#x53EA;&#x7528;&#x5B83;&#x6765;&#x9009;&#x62E9;&#x4E00;&#x4E2A; pod &#x3002;&#x5927;&#x591A;&#x6570;&#xFF08;&#x5373;&#x4F7F;&#x4E0D;&#x662F;&#x5168;&#x90E8;&#xFF09;&#x63A7;&#x5236;&#x5668;&#x90FD;&#x662F;&#x8FD9;&#x6837;&#x5DE5;&#x4F5C;&#x7684; &#x3002;</p>
+<h1 id="&#x5404;&#x7EC4;&#x4EF6;&#x7684;&#x539F;&#x7406;">&#x5404;&#x7EC4;&#x4EF6;&#x7684;&#x539F;&#x7406;</h1>
+<h2 id="apiserver">apiserver</h2>
+<p>apiserver&#x63D0;&#x4F9B;&#x4E86;&#x96C6;&#x7FA4;&#x5404;&#x7C7B;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x7684;API&#x63A5;&#x53E3;&#xFF0C;apiserver&#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;&#xFF0C;&#x5C06;&#x5168;&#x90E8;&#x7684;&#x6570;&#x636E;&#x72B6;&#x6001;&#x4FDD;&#x5B58;&#x5728;etcd&#x4E2D;&#xFF0C;&#x53EA;&#x6709;apiserver&#x4E0E;etcd&#x4EA4;&#x4E92;&#xFF0C;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6; controller-manager&#x3001;scheduler&#x3001;kubelet&#x901A;&#x8FC7;apiserver&#x6765;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;</p>
+<h2 id="controller-manager">Controller-manager</h2>
+<p>controller-manager&#x662F;&#x5404;&#x79CD;&#x63A7;&#x5236;&#x5668;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5B83;&#x7684;&#x529F;&#x80FD;&#x662F;&#x4F7F;&#x96C6;&#x7FA4;&#x8D44;&#x6E90;&#x7684;&#x72B6;&#x6001;&#x59CB;&#x7EC8;&#x4FDD;&#x6301;&#x5728;&#x7528;&#x6237;&#x671F;&#x671B;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<h2 id="scheduler">scheduler</h2>
+<h3 id="&#x9884;&#x9009;">&#x9884;&#x9009;</h3>
+<p>&#x5168;&#x5C40;&#x9009;&#x53EF;&#xFF1A;&#x5148;&#x6839;&#x636E;&#x9884;&#x9009;&#x7684;&#x7B56;&#x7565;&#x4ECE;&#x5168;&#x5C40;&#x4E2D;&#x9009;&#x51FA;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x7684;&#x5019;&#x9009;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x9884;&#x9009;&#x7B56;&#x7565;&#x6709;</p>
+<ul>
+<li>PodFitsResources&#xFF1A;&#x5224;&#x65AD;&#x8282;&#x70B9;&#x8D44;&#x6E90;&#x662F;&#x5426;&#x6EE1;&#x8DB3;</li>
+<li>PodSelectorMatches&#xFF1A;&#x662F;&#x5426;&#x6709;&#x6307;&#x5B9A;label&#x6216;taint&#xFF0C;&#x5373;nodeselector</li>
+<li>PodFitsHost&#xFF1A;&#x662F;&#x5426;&#x6709;&#x6307;&#x5B9A;&#x8282;&#x70B9;&#x8C03;&#x5EA6;</li>
+</ul>
+<h3 id="&#x9009;&#x4F18;">&#x9009;&#x4F18;</h3>
+<p>&#x4ECE;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5019;&#x9009;&#x8282;&#x70B9;&#x4E2D;&#x9009;&#x62E9;&#x6700;&#x4F18;&#x7684;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x4F18;&#x9009;&#x7B56;&#x7565;&#x6709;</p>
+<ul>
+<li>LeastRequestedPriority&#xFF1A;&#x9009;&#x62E9;&#x8D44;&#x6E90;&#x6D88;&#x8017;&#x6700;&#x5C0F;&#x7684;&#x8282;&#x70B9;</li>
+<li>BalancedResourceAllocation&#xFF1A;&#x9009;&#x62E9;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x7387;&#x6700;&#x5747;&#x8861;&#x7684;&#x8282;&#x70B9;</li>
+<li>NodeAffinity&#xFF1A;&#x8282;&#x70B9;&#x4EB2;&#x7F18;&#x6027;&#x6216;&#x53CD;&#x4EB2;&#x7F18;&#x6027;&#x8C03;&#x5EA6;</li>
+</ul>
+<p>&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>PrioritizeNodes&#x901A;&#x8FC7;&#x5E76;&#x884C;&#x8FD0;&#x884C;&#x5404;&#x4E2A;&#x4F18;&#x5148;&#x7EA7;&#x51FD;&#x6570;&#x6765;&#x5BF9;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x4F18;&#x5148;&#x7EA7;&#x6392;&#x5E8F;&#x3002;</li>
+<li>&#x6BCF;&#x4E2A;&#x4F18;&#x5148;&#x7EA7;&#x51FD;&#x6570;&#x4F1A;&#x7ED9;&#x8282;&#x70B9;&#x6253;&#x5206;&#xFF0C;&#x6253;&#x5206;&#x8303;&#x56F4;&#x4E3A;0-10&#x5206;&#x3002;</li>
+<li>0 &#x8868;&#x793A;&#x4F18;&#x5148;&#x7EA7;&#x6700;&#x4F4E;&#x7684;&#x8282;&#x70B9;&#xFF0C;10&#x8868;&#x793A;&#x4F18;&#x5148;&#x7EA7;&#x6700;&#x9AD8;&#x7684;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x6BCF;&#x4E2A;&#x4F18;&#x5148;&#x7EA7;&#x51FD;&#x6570;&#x4E5F;&#x6709;&#x5404;&#x81EA;&#x7684;&#x6743;&#x91CD;&#x3002;</li>
+<li>&#x4F18;&#x5148;&#x7EA7;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x8282;&#x70B9;&#x5206;&#x6570;&#x4E58;&#x4EE5;&#x6743;&#x91CD;&#x4EE5;&#x83B7;&#x5F97;&#x52A0;&#x6743;&#x5206;&#x6570;&#x3002;</li>
+<li>&#x6700;&#x540E;&#x7EC4;&#x5408;&#xFF08;&#x6DFB;&#x52A0;&#xFF09;&#x6240;&#x6709;&#x5206;&#x6570;&#x4EE5;&#x83B7;&#x5F97;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x603B;&#x52A0;&#x6743;&#x5206;&#x6570;&#x3002;</li>
+</ul>
+<h3 id="&#x62A2;&#x5360;">&#x62A2;&#x5360;</h3>
+<p>&#x5F53;pod&#x4E0D;&#x9002;&#x5408;&#x4EFB;&#x4F55;&#x8282;&#x70B9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x80FD;pod&#x4F1A;&#x8C03;&#x5EA6;&#x5931;&#x8D25;&#x3002;&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x80FD;&#x4F1A;&#x6839;&#x636E;pod&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x53D1;&#x751F;&#x62A2;&#x5360;&#x3002;</p>
+<h2 id="kubelet">kubelet</h2>
+<p>kubelet&#x4E3B;&#x8981;&#x7528;&#x6765;&#x7BA1;&#x7406;&#x5206;&#x914D;&#x5230;&#x8BE5;&#x8282;&#x70B9;&#x4E0A;&#x7684;pod&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x5B9A;&#x671F;&#x5411;apiserver&#x6C47;&#x62A5;&#x8282;&#x70B9;&#x7684;&#x5065;&#x5EB7;&#x72B6;&#x51B5;&#x3002;</p>
+<h1 id="list-watch&#x673A;&#x5236;">list-watch&#x673A;&#x5236;</h1>
+<p>Etcd &#x5B58;&#x50A8;&#x96C6;&#x7FA4;&#x7684;&#x6570;&#x636E;&#x4FE1;&#x606F;&#xFF0C;apiserver &#x4F5C;&#x4E3A;&#x7EDF;&#x4E00;&#x5165;&#x53E3;&#xFF0C;&#x4EFB;&#x4F55;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x5FC5;&#x987B;&#x7ECF;&#x8FC7; apiserver&#x3002;&#x5BA2;&#x6237;&#x7AEF;(kubelet/scheduler/ontroller-manager)&#x901A;&#x8FC7; list-watch &#x76D1;&#x542C; apiserver &#x4E2D;&#x8D44;&#x6E90;(pod/rs/rc &#x7B49;&#x7B49;)&#x7684; create, update &#x548C; delete &#x4E8B;&#x4EF6;&#xFF0C;&#x5E76;&#x9488;&#x5BF9;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#x8C03;&#x7528;&#x76F8;&#x5E94;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x90A3;&#x4E48; list-watch &#x5177;&#x4F53;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF0C;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;list-watch &#x6709;&#x4E24;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF0C;&#x5206;&#x522B;&#x662F; list &#x548C; watch&#x3002;list &#x975E;&#x5E38;&#x597D;&#x7406;&#x89E3;&#xFF0C;&#x5C31;&#x662F;&#x8C03;&#x7528;&#x8D44;&#x6E90;&#x7684; list API &#x7F57;&#x5217;&#x8D44;&#x6E90;&#xFF0C;&#x57FA;&#x4E8E; HTTP &#x77ED;&#x94FE;&#x63A5;&#x5B9E;&#x73B0;&#xFF1B;watch &#x5219;&#x662F;&#x8C03;&#x7528;&#x8D44;&#x6E90;&#x7684; watch API &#x76D1;&#x542C;&#x8D44;&#x6E90;&#x53D8;&#x66F4;&#x4E8B;&#x4EF6;&#xFF0C;&#x57FA;&#x4E8E; HTTP &#x957F;&#x94FE;&#x63A5;&#x5B9E;&#x73B0;&#xFF0C;&#x4E5F;&#x662F;&#x672C;&#x6587;&#x91CD;&#x70B9;&#x5206;&#x6790;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6D88;&#x606F;&#x5FC5;&#x987B;&#x662F;&#x53EF;&#x9760;&#x7684;&#xFF0C;list &#x548C; watch &#x4E00;&#x8D77;&#x4FDD;&#x8BC1;&#x4E86;&#x6D88;&#x606F;&#x7684;&#x53EF;&#x9760;&#x6027;&#xFF0C;&#x907F;&#x514D;&#x56E0;&#x6D88;&#x606F;&#x4E22;&#x5931;&#x800C;&#x9020;&#x6210;&#x72B6;&#x6001;&#x4E0D;&#x4E00;&#x81F4;&#x573A;&#x666F;&#x3002;&#x5177;&#x4F53;&#x800C;&#x8A00;&#xFF0C;list API &#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x7684;&#x8D44;&#x6E90;&#x53CA;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x72B6;&#x6001;(&#x5373;&#x671F;&#x671B;&#x7684;&#x72B6;&#x6001;)&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x8FC7;&#x62FF;&#x671F;&#x671B;&#x7684;&#x72B6;&#x6001;&#x548C;&#x5B9E;&#x9645;&#x7684;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x5BF9;&#x6BD4;&#xFF0C;&#x7EA0;&#x6B63;&#x72B6;&#x6001;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x8D44;&#x6E90;&#x3002;Watch API &#x548C; apiserver &#x4FDD;&#x6301;&#x4E00;&#x4E2A;&#x957F;&#x94FE;&#x63A5;&#xFF0C;&#x63A5;&#x6536;&#x8D44;&#x6E90;&#x7684;&#x72B6;&#x6001;&#x53D8;&#x66F4;&#x4E8B;&#x4EF6;&#x5E76;&#x505A;&#x76F8;&#x5E94;&#x5904;&#x7406;&#x3002;&#x5982;&#x679C;&#x4EC5;&#x8C03;&#x7528; watch API&#xFF0C;&#x82E5;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x8FDE;&#x63A5;&#x4E2D;&#x65AD;&#xFF0C;&#x5C31;&#x6709;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x6D88;&#x606F;&#x4E22;&#x5931;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x901A;&#x8FC7; list API &#x89E3;&#x51B3;&#x6D88;&#x606F;&#x4E22;&#x5931;&#x7684;&#x95EE;&#x9898;&#x3002;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x89D2;&#x5EA6;&#x51FA;&#x53D1;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A; list API &#x83B7;&#x53D6;&#x5168;&#x91CF;&#x6570;&#x636E;&#xFF0C;watch API &#x83B7;&#x53D6;&#x589E;&#x91CF;&#x6570;&#x636E;&#x3002;&#x867D;&#x7136;&#x4EC5;&#x4EC5;&#x901A;&#x8FC7;&#x8F6E;&#x8BE2; list API&#xFF0C;&#x4E5F;&#x80FD;&#x8FBE;&#x5230;&#x540C;&#x6B65;&#x8D44;&#x6E90;&#x72B6;&#x6001;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4F46;&#x662F;&#x5B58;&#x5728;&#x5F00;&#x9500;&#x5927;&#xFF0C;&#x5B9E;&#x65F6;&#x6027;&#x4E0D;&#x8DB3;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="informer&#x7684;&#x7EC4;&#x4EF6;">informer&#x7684;&#x7EC4;&#x4EF6;</h2>
+<ul>
+<li>Controller&#xFF1A;&#x7528;&#x6765;&#x628A;Reflector&#x3001;DeltaFIFO&#x7EC4;&#x5408;&#x8D77;&#x6765;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9;&#x56FA;&#x5B9A;&#x7684;&#x3001;&#x6807;&#x51C6;&#x7684;&#x5904;&#x7406;&#x6D41;&#x7A0B;&#x3002;</li>
+<li>Reflector&#xFF1A;&#x901A;&#x8FC7; Kubernetes Watch API &#x76D1;&#x542C;&#x67D0;&#x79CD; resource &#x4E0B;&#x7684;&#x6240;&#x6709;&#x4E8B;&#x4EF6;</li>
+<li>DeltaFIFO&#xFF1A;&#x8BB0;&#x5F55;&#x5BF9;&#x8C61;&#x53D8;&#x5316;&#x7684;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#x7684;&#x961F;&#x5217;</li>
+<li>LocalStore&#xFF1A;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#xFF0C;LocalStore &#x53EA;&#x4F1A;&#x88AB; Lister &#x7684; List/Get &#x65B9;&#x6CD5;&#x8BBF;&#x95EE; &#x3002;&#x4E0E;DeltaFIFO&#x5B58;&#x5728;resync&#x3002;</li>
+<li>Lister&#xFF1A;&#x8C03;&#x7528; List/Get &#x65B9;&#x6CD5;</li>
+<li>Processor&#xFF1A;&#x8BB0;&#x5F55;&#x4E86;&#x6240;&#x6709;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5B9E;&#x4F8B;(&#x5373; ResourceEventHandler &#x5B9E;&#x4F8B;)&#xFF0C;&#x5E76;&#x8D1F;&#x8D23;&#x89E6;&#x53D1;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x3002;</li>
+</ul>
+<p><strong>&#x6D41;&#x7A0B;&#xFF1A;</strong></p>
+<ol>
+<li>Informer &#x5728;&#x521D;&#x59CB;&#x5316;&#x65F6;&#xFF0C;Reflector &#x4F1A;&#x5148; List API &#x83B7;&#x5F97;&#x6240;&#x6709;&#x7684; Pod</li>
+<li>Reflect &#x62FF;&#x5230;&#x5168;&#x90E8;Pod&#x540E;&#xFF0C;&#x4F1A;&#x5C06;&#x5168;&#x90E8; Pod &#x653E;&#x5230; Store &#x4E2D;</li>
+<li>&#x5982;&#x679C;&#x6709;&#x4EBA;&#x8C03;&#x7528; Lister &#x7684; List/Get &#x65B9;&#x6CD5;&#x83B7;&#x53D6; Pod&#xFF0C; &#x90A3;&#x4E48; Lister &#x4F1A;&#x76F4;&#x63A5;&#x4ECE; Store &#x4E2D;&#x62FF;&#x6570;&#x636E;</li>
+<li>Informer &#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;Reflector &#x5F00;&#x59CB; Watch Pod&#xFF0C;&#x76D1;&#x542C; Pod &#x76F8;&#x5173; &#x7684;&#x6240;&#x6709;&#x4E8B;&#x4EF6;;&#x5982;&#x679C;&#x6B64;&#x65F6; pod_1 &#x88AB;&#x5220;&#x9664;&#xFF0C;&#x90A3;&#x4E48; Reflector &#x4F1A;&#x76D1;&#x542C;&#x5230;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;</li>
+<li>Reflector &#x5C06; pod_1 &#x88AB;&#x5220;&#x9664; &#x7684;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x53D1;&#x9001;&#x5230; DeltaFIFO</li>
+<li>DeltaFIFO &#x9996;&#x5148;&#x4F1A;&#x5C06;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x5B58;&#x50A8;&#x5728;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E2D;(&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x4E2A; queue)&#xFF0C;&#x7136;&#x540E;&#x4F1A;&#x76F4;&#x63A5;&#x64CD;&#x4F5C; Store &#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5220;&#x9664; Store &#x4E2D;&#x7684; pod_1</li>
+<li>DeltaFIFO &#x518D; Pop &#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x5230; Controller &#x4E2D;</li>
+<li>Controller &#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1; Processor &#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E3B;&#x8981;&#x6709;OnAdd&#x3001;OnUpdate&#x548C; OnDelete&#x4E09;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</li>
+</ol>
+<p>&#x6D41;&#x7A0B;2&#xFF1A;</p>
+<ol>
+<li>reflector&#x901A;&#x8FC7;list-watch&#x7684;&#x673A;&#x5236;&#x5C06;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;DeltaFIFO&#x7684;&#x961F;&#x5217;&#x4E2D;&#xFF0C;ListAndWatch&#x7B2C;&#x4E00;&#x6B21;&#x4F1A;&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x7136;&#x540E;watch&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x7684;&#x7248;&#x672C;&#x53F7;&#x6765;&#x67E5;&#x770B;&#x662F;&#x5426;&#x6709;&#x88AB;&#x53D8;&#x66F4;&#x3002;<code>list()</code>&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x672C;&#x5730;&#x7684;&#x7F13;&#x5B58;&#x76F8;&#x5BF9;&#x4E8E;etcd&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5B58;&#x5728;&#x5EF6;&#x8FDF;&#xFF0C;<code>Reflector</code>&#x4F1A;&#x901A;&#x8FC7;<code>watch</code>&#x7684;&#x65B9;&#x6CD5;&#x5C06;&#x5EF6;&#x8FDF;&#x7684;&#x90E8;&#x5206;&#x8865;&#x5145;&#x4E0A;&#xFF0C;&#x4F7F;&#x5F97;&#x672C;&#x5730;&#x7684;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x4E0E;etcd&#x7684;&#x6570;&#x636E;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</li>
+<li><code>Reflector</code>&#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;watch&#x6307;&#x5B9A;&#x7684;k8s&#x8D44;&#x6E90;&#xFF0C;&#x5E76;&#x5C06;&#x53D8;&#x5316;&#x540C;&#x6B65;&#x5230;&#x672C;&#x5730;&#x662F;<code>store</code>&#x4E2D;&#x3002;<code>Reflector</code>&#x4EE5;<code>resyncPeriod</code>&#x4E3A;&#x5468;&#x671F;&#x5B9A;&#x671F;&#x6267;&#x884C;list&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>Reflector</code>&#x6765;&#x5B9A;&#x671F;&#x5904;&#x7406;&#x6240;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x9010;&#x6B65;&#x5904;&#x7406;&#x53D8;&#x5316;&#x7684;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>controller.Run&#x51FD;&#x6570;&#x8FD8;&#x4F1A;&#x8C03;&#x7528;processLoop&#x51FD;&#x6570;&#xFF0C;processLoop&#x901A;&#x8FC7;&#x8C03;&#x7528;HandleDeltas&#xFF0C;&#x518D;&#x8C03;&#x7528;distribute&#xFF0C;processorListener.add&#x6700;&#x7EC8;&#x5C06;&#x4E0D;&#x540C;&#x66F4;&#x65B0;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x52A0;&#x5165;<code>processorListener</code>&#x7684;channel&#x4E2D;&#xFF0C;&#x4F9B;processorListener.Run&#x4F7F;&#x7528;&#x3002;</li>
+<li>processor&#x7684;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x5C31;&#x662F;&#x8BB0;&#x5F55;&#x4E86;&#x6240;&#x6709;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5B9E;&#x4F8B;(&#x5373; ResourceEventHandler &#x5B9E;&#x4F8B;)&#xFF0C;&#x5E76;&#x8D1F;&#x8D23;&#x89E6;&#x53D1;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x3002;processor&#x8BB0;&#x5F55;&#x4E86;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x4E8B;&#x4EF6;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4E2D;&#x4E8B;&#x4EF6;&#x51FD;&#x6570;&#x5728;NewXxxController&#x6784;&#x9020;&#x51FD;&#x6570;&#x90E8;&#x5206;&#x6CE8;&#x518C;&#xFF0C;&#x5177;&#x4F53;&#x4E8B;&#x4EF6;&#x51FD;&#x6570;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x5C06;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x5BF9;&#x8C61;&#x52A0;&#x5165;&#x5BF9;&#x5E94;&#x7684;controller&#x7684;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x7531;&#x7C7B;&#x4F3C;syncDeployment&#x7684;&#x540C;&#x6B65;&#x51FD;&#x6570;&#x6765;&#x7EF4;&#x6301;&#x671F;&#x671B;&#x72B6;&#x6001;&#x7684;&#x540C;&#x6B65;&#x903B;&#x8F91;&#x3002;</li>
+</ol>
+<h1 id="pod&#x7684;&#x6D41;&#x7A0B;">Pod&#x7684;&#x6D41;&#x7A0B;</h1>
+<ol>
+<li>&#x901A;&#x8FC7;kubectl&#x90E8;&#x7F72;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#xFF0C;</li>
+<li>apiserver&#x63A5;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x653E;&#x5230;etcd&#x4E2D;&#xFF0C;</li>
+<li>controller&#x53D1;&#x73B0;&#x6709;&#x6570;&#x636E;&#x53D8;&#x5316;&#xFF0C;&#x8C03;&#x7528;&#x5BF9;&#x5E94;&#x7684;controller&#x53BB;&#x521B;&#x5EFA;&#x671F;&#x671B;&#x7684;pod&#xFF0C;</li>
+<li>scheduler&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x9009;&#x51FA;&#x9002;&#x5408;&#x8BE5;pod&#x7684;&#x6700;&#x4F18;&#x7684;&#x8282;&#x70B9;</li>
+<li>&#x8282;&#x70B9;&#x4E0A;&#x7684;kubelet&#x53D1;&#x73B0;&#x9700;&#x8981;&#x521B;&#x5EFA;pod&#xFF0C;&#x5C31;&#x901A;&#x8FC7;container&#x7684;&#x63A5;&#x53E3;&#x53BB;&#x90E8;&#x7F72;pod</li>
+<li>Kube-proxy&#x7BA1;&#x7406;pod&#x7684;&#x7F51;&#x7EDC;&#x8F6C;&#x53D1;&#xFF0C;&#x5305;&#x62EC;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x548C;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x3002;</li>
+</ol>
+<p>&#x8BE6;&#x7EC6;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<ol>
+<li><p>&#x6D41;&#x7A0B;1(RC&#x521B;&#x5EFA;)&#x7528;&#x6237;&#x901A;&#x8FC7;WebUI&#x6216;&#x8005;kubectl&#x5DE5;&#x5177;&#x8C03;&#x7528;<code>kube-apiserver</code>&#x63D0;&#x4F9B;&#x7684;&#x6807;&#x51C6; <code>REST API</code>&#x63A5;&#x53E3;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>ReplicationController</code>&#x3002;&#x5047;&#x5B9A;&#x5728;ReplicationController&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E2D;&#x5B9A;&#x4E49;&#x4E3A;2&#x4E2A;Pod&#x3002;&#x7528;&#x6237;&#x76F8;&#x5F53;&#x6267;&#x884C;&#x4E86;&#x4E0B;&#x9762;&#x7684; <code>curl</code>&#x547D;&#x4EE4;&#x3002;</p>
+<pre class="language-"><code>curl -XPOST -d &quot;v1.ReplicationController&quot; -H &quot;Content-Type: application/json&quot; http://ip:port/api/v1/namespaces/{namespace}/replicationcontrollers
+</code></pre><p><strong>&#x800C;&#x6B64;&#x5904;&#x7684;v1.ReplicationController&#x5373;&#x7528;&#x6237;&#x7684;&#x58F0;&#x660E;&#x5F0F;&#x6570;&#x636E;&#xFF0C;&#x5176;&#x4E2D;&#x4F1A;&#x6307;&#x5B9A;&#x5E94;&#x7528;&#x7684;&#x5B9E;&#x4F8B;&#x6570;&#xFF0C;&#x4F7F;&#x7528;&#x955C;&#x50CF;&#x7B49;&#x4FE1;&#x606F;</strong></p>
+</li>
+<li><p>&#x6D41;&#x7A0B;2~3(Pod&#x521B;&#x5EFA;)<code>kube-controller-manager</code>&#x4F1A;&#x901A;&#x8FC7;list-watch&#x673A;&#x5236;&#x83B7;&#x53D6;&#x5230;&#x65B0;&#x5EFA;&#x4E2D;&#x7684; <code>v1.ReplicationController</code>&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x9A71;&#x4F7F;<code>ReplicationController&#x63A7;&#x5236;&#x5668;</code>&#x5DE5;&#x4F5C;&#x3002; <code>kube-controller-manager</code>&#x4E2D;&#x5404;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x6A21;&#x5757;&#x7684;&#x5DE5;&#x4F5C;&#x5C31;&#x662F;&#x8BA9;&#x96C6;&#x7FA4;&#x73B0;&#x72B6;&#x8D8B;&#x4E8E;&#x7528;&#x6237;&#x671F;&#x5F85;&#x3002;&#x5047;&#x5B9A;&#x7528;&#x6237;&#x58F0;&#x660E;&#x5B9E;&#x4F8B;&#x662F;2&#xFF0C;&#x800C;&#x5F53;&#x524D;&#x96C6;&#x7FA4;&#x4E2D;&#x5BF9;&#x5E94;&#x7684;Pod&#x6570;&#x91CF;&#x4E3A;0&#xFF0C;&#x5219;&#x63A7;&#x5236;&#x5668;&#x5C31;&#x4F1A;&#x521B;&#x5EFA;2&#x4E2A;Pod.</p>
+<p><em>&#x5F53;&#x7136;&#x540E;&#x7EED;controller-manager&#x4E5F;&#x4F1A;&#x901A;&#x8FC7;list-watch&#x673A;&#x5236;&#x83B7;&#x53D6;&#x5230;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x4E24;&#x4E2A;Pod&#xFF0C;&#x56E0;&#x4E3A;&#x548C;&#x7528;&#x6237;&#x671F;&#x5F85;&#x503C;&#x4E00;&#x81F4;&#xFF0C;ReplicationController&#x7684;&#x63A7;&#x5236;&#x903B;&#x8F91;&#x5C31;&#x6536;&#x655B;&#x5728;&#x7528;&#x6237;&#x671F;&#x5F85;&#x72B6;&#x6001;&#x4E86;&#x3002;</em></p>
+</li>
+<li><p>&#x6D41;&#x7A0B;4~5(Pod&#x8C03;&#x5EA6;)<code>kube-scheduler</code>&#x4E5F;&#x4F1A;&#x901A;&#x8FC7;list-watch&#x673A;&#x5236;&#x83B7;&#x53D6;&#x5230;&#x65B0;&#x521B;&#x5EFA;&#x7684; <code>v1.Pod</code>&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#x4E3A;Pod&#x9009;&#x62E9;&#x6700;&#x5408;&#x9002;&#x7684;&#x8282;&#x70B9;&#x3002;&#x5047;&#x5B9A;&#x8C03;&#x5EA6;&#x7ED3;&#x679C;&#x662F;&#x4E24;&#x4E2A;Pod&#x9009;&#x62E9;&#x7684;&#x662F;minion1&#x548C;minion2.&#x5373;&#x5237;&#x65B0;<code>v1.Pod</code>&#x6570;&#x636E;&#x7684; <code>spec.nodeName</code>&#x5B57;&#x6BB5;&#x4E3A;minion1&#x548C;minion2&#x7684;nodeName&#x3002;</p>
+</li>
+<li><p>&#x6D41;&#x7A0B;6~7(Pod&#x8FD0;&#x884C;)&#x6700;&#x540E;minion&#x4E0A;&#x7684;<code>kubelet</code>&#x4E5F;&#x4F1A;&#x901A;&#x8FC7;list-watch&#x673A;&#x5236;&#x83B7;&#x53D6;&#x5230;&#x8C03;&#x5EA6;&#x5B8C;&#x7684; <code>v1.Pod</code>&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;<code>container.Runtime</code>&#x63A5;&#x53E3;&#x521B;&#x5EFA;Pod&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x5BB9;&#x5668;&#x3002;&#x5E76;&#x5237;&#x65B0;ETCD&#x4E2D;Pod&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x3002;</p>
+</li>
+<li><p>&#x8FD0;&#x884C;&#x6D41;&#x7A0B;&#x770B;Pod&#x72B6;&#x6001;&#x6570;&#x636E;&#x53D8;&#x5316;&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x7684;&#x4ECB;&#x7ECD;&#xFF0C;&#x5728;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;Pod&#x72B6;&#x6001;&#x53D8;&#x5316;</p>
+</li>
+</ol>
+<h1 id="pv&#x53CA;pvc&#x7684;&#x6D41;&#x7A0B;">PV&#x53CA;PVC&#x7684;&#x6D41;&#x7A0B;</h1>
+<p><strong>&#x672A;&#x4F7F;&#x7528;sc&#x7684;&#x6B65;&#x9AA4;&#xFF1A;</strong></p>
+<ol>
+<li>&#x7BA1;&#x7406;&#x5458;&#x521B;&#x5EFA;&#x67D0;&#x7C7B;&#x578B;&#x7684;&#x7F51;&#x7EDC;&#x5B58;&#x50A8;&#xFF0C;&#x5982;nfs</li>
+<li>&#x7BA1;&#x7406;&#x5458;&#x521B;&#x5EFA;pv&#x4F7F;&#x7528;&#x8BE5;&#x7F51;&#x7EDC;&#x5B58;&#x50A8;</li>
+<li>&#x7528;&#x6237;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;pvc&#x7ED1;&#x5B9A;&#x8BE5;pv</li>
+<li>&#x7528;&#x6237;&#x521B;&#x5EFA;pod&#x5F15;&#x7528;&#x8BE5;pvc</li>
+</ol>
+<p>pv&#x4E0D;&#x5C5E;&#x4E8E;&#x4EFB;&#x4F55;namespace&#xFF0C;&#x662F;&#x5C5E;&#x4E8E;&#x96C6;&#x7FA4;&#x7EA7;&#x522B;&#x7684;&#x8D44;&#x6E90;&#x3002;</p>
+<p><strong>&#x4F7F;&#x7528;storageclass&#x7684;&#x6B65;&#x9AA4;&#x6D41;&#x7A0B;&#xFF1A;</strong></p>
+<ol>
+<li>&#x7BA1;&#x7406;&#x5458;&#x90E8;&#x7F72;&#x6301;&#x4E45;&#x5377;&#x7F6E;&#x914D;&#x7A0B;&#x5E8F;&#xFF0C;&#x5373;provisioner</li>
+<li>&#x7BA1;&#x7406;&#x5458;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x4E86;&#x8BE5;provisioner&#x7684;storageclass</li>
+<li>&#x7528;&#x6237;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x4E86;&#x8BE5;storageclass&#x7684;pvc</li>
+<li>k8s&#x67E5;&#x627E;&#x5176;&#x5F15;&#x7528;&#x7684;storageclass&#xFF0C;&#x5E76;&#x6839;&#x636E;pvc&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x8BBF;&#x95EE;&#x6A21;&#x5F0F;&#x548C;&#x5B58;&#x50A8;&#x5927;&#x5C0F;&#x5728;storageclass&#x914D;&#x7F6E;&#x65B0;&#x7684;pv</li>
+<li>Provisioner&#x521B;&#x5EFA;&#x5BF9;&#x5E94;&#x7684;pv&#xFF0C;pv&#x548C;pvc&#x5F62;&#x6210;&#x7ED1;&#x5B9A;&#x5173;&#x7CFB;</li>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;pod&#xFF0C;&#x5F15;&#x7528;&#x8BE5;pvc&#x3002;</li>
+</ol>
+<h1 id="pause&#x5BB9;&#x5668;&#x7684;&#x4F5C;&#x7528;">pause&#x5BB9;&#x5668;&#x7684;&#x4F5C;&#x7528;</h1>
+<p>1.&#x662F;&#x63D0;&#x4F9B;Pod&#x5728;Linux&#x4E2D;&#x5171;&#x4EAB;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x57FA;&#x7840;&#xFF0C;</p>
+<p>2.&#x662F;&#x63D0;&#x4F9B;Pid Namespace&#x5E76;&#x4F7F;&#x7528;init&#x8FDB;&#x7A0B;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; www.huweihuang.com all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Updated at 
+2025-07-08 20:55:40
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../golang/golang-advanced.html" class="navigation navigation-prev " aria-label="Previous page: Golang进阶">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="k8s-advanced.html" class="navigation navigation-next " aria-label="Next page: k8s进阶">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"k8s基础","level":"6.1","depth":1,"next":{"title":"k8s进阶","level":"6.2","depth":1,"path":"k8s/k8s-advanced.md","ref":"k8s/k8s-advanced.md","articles":[]},"previous":{"title":"Golang进阶","level":"5.2","depth":1,"path":"golang/golang-advanced.md","ref":"golang/golang-advanced.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","image-captions","editlink","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-huweihuang","-highlight","prism","prism-themes","sitemap-general","ga","donate","expandable-chapters"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © www.huweihuang.com","modify_label":"Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"theme-huweihuang":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"googleAdsenseClient":"ca-pub-8205636531078391"},"github":{"url":"https://github.com/huweihuang"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/huweihuang/interview-notes/blob/master/"},"splitter":{},"readmore":{"allowDomain":["www.huweihuang.com","localhost"],"blogId":"30679-1666624938200-328","name":"容器云架构","qrcode":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1551600382/blog/wechat-public-acconut.jpg","keyword":"k8s"},"donate":{"alipay":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1551599640/blog/donate/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"https://res.cloudinary.com/dqxtn0ick/image/upload/v1551599472/blog/donate/wechatpay.jpg","wechatText":"微信打赏"},"codesnippet":{},"sitemap-general":{"prefix":"https://www.huweihuang.com/interview-notes/"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"showLevelIcon":false,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","multipleH1":false,"multipleH2":false,"multipleH3":false,"multipleH4":false},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico","appleTouch":"images/favicon.ico","appleTouchMore":{"120x120":"images/favicon.ico","180x180":"images/favicon.ico"}},"prism-themes":{},"github-buttons":{"repo":"huweihuang/interview-notes","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"e146d71b77957235bba1e709d930f62e"},"ga":{"configuration":"auto","token":"UA-114718458-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"expandable-chapters":{},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"胡伟煌","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"面试笔记","language":"zh-hans","links":{"sidebar":{"胡伟煌的博客":"https://www.huweihuang.com"}},"gitbook":"*","description":"面试笔记"},"file":{"path":"k8s/k8s-basic.md","mtime":"2025-07-08T12:55:40.073Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-07-09T05:47:17.508Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
