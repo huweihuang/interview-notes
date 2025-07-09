@@ -8,5 +8,16 @@
 <url> <loc>https://www.huweihuang.com/interview-notes/golang/golang-advanced.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/interview-notes/k8s/k8s-basic.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/interview-notes/k8s/k8s-advanced.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/leetcode.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/go.pkg.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/动态规划/动态规划.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/动态规划/斐波那契数列.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/动态规划/爬楼梯.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/动态规划/青蛙跳台阶问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/动态规划/零钱兑换.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/动态规划/接雨水.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/字符串/string.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/数组/array.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/滑动窗口/滑动窗口.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/interview-notes/leetcode/链表/link.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
