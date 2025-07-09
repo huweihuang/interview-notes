@@ -13,6 +13,7 @@
         "github",
         "codesnippet",
         "splitter",
+        "anchor-navigation-ex",
         "image-captions",
         "editlink",
         "-lunr", "-search", "search-plus",
